@@ -20,43 +20,32 @@ empre que encontrar um tesouro, imprima " Tesouro na sala X!".
 Sempre que encontrar um monstro, imprima "Monstro na sala X!".
 
 <h1><b>Código</b></h1>
-//Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
 
-//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
 
-//- "print": imprime um texto de saída (output), pulando linha.
+   const salasComTesouro = [2, 4, 7];
+   
+   const salasComMonstro = [3, 6, 8];
+   
+for (let sala = 1; sala <= totalSalas; sala++)
 
-// Entrada de dados. Lembre-se: O parseInt(()) é importante para a conversão dos valores de entrada(String) para um valor numérico(int).
-const totalSalas = parseInt(gets());
-
-//Aqui temos uma demonstração de array com valores já predefinidos:
-
-<b>
-const salasComTesouro = [2, 4, 7];
- 
-const salasComMonstro = [3, 6, 8];</b>
-
-//Aqui temos uma forma de loop para percorrer cada sala da masmorra:
-
-<b>
-for (let sala = 1; sala <= totalSalas; sala++) { </b>
- 
-//Utilizamos o .includes() para verificar se um número está presente nos arrays:
-
-</b>
+{ 
     const temTesouro = salasComTesouro.includes(sala);
+    
     const temMonstro = salasComMonstro.includes(sala);
-    </b>
-
-//TODO: Agora implemente uma condição necessária para verificar e exibir se há tesouro na sala e se há montro na sala:
-
-<b>
-    if (temTesouro  ) {
- 
-        print("Tesouro na sala " + sala + "!");
-    }
-    else if ( temMonstro )
+    
+    if (temTesouro ) 
+    
     {
-        print("Monstro na sala " + sala + "!");
+    
+        print("Tesouro na sala " + sala + "!");
+        
     }
-} </b>
+    
+    else if ( temMonstro )
+    
+    {
+    
+        print("Monstro na sala " + sala + "!");
+        
+    }
+} 
