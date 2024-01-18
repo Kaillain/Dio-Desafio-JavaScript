@@ -1,51 +1,62 @@
-# Desafio-3-CAPTURANDO POKEMON 
+# Desafio-3-COLETANDO TESOUROS
 
 <h1><b>Descrição</b></h1> 
 
- No mundo dos jogos Pokémon, os treinadores começam sua jornada escolhendo um dos três Pokémons iniciais: Bulbasaur, Charmander e Mewtwo. Cada treinador escolhe um dos quatro pokemons. 
- Seu desafio é criar uma solução que permita ao jogador escolher um dos Pokémons iniciais e exibir uma mensagem de boas-vindas e o Pokémon escolhido.
+Sua missão é vasculhar as salas da masmorra em busca de recompensas lendárias e desafios perigosos. Cada sala pode conter monstros formidáveis, tesouros preciosos ou ambos. Use suas habilidades estratégicas para enfrentar as ameaças e coletar os tesouros!
+
+
+<h1><b>Tarefa</b></h1> 
+Escreva um programa que simule sua jornada heróica pela masmorra. O programa deve percorrer cada sala e verificar se há tesouros ou monstros. Se você encontrar um tesouro, colecionará a recompensa. Se encontrar um monstro, terá que derrotá-lo para continuar.
+
+<h1><b> Atenção</b></h1> 
+Em nossa resolução utilizamos a função.includes() do JavaScript para verificar se um número (representando a sala atual) está presente nos arrays salasComTesouro e salasComMonstro.
  
 <h1><b> Entrada</b></h1> 
-Você receberá um número inteiro que representa a escolha do treinador: 1 para Bulbasaur, 2 para Charmander, 4 Pikachu e 5 para Mewtwo.
+O número total de salas no dungeon (um número inteiro).
 
 <h1><b>Saída</b></h1> 
-A saída deve ser uma mensagem de boas-vindas que inclua o nome do Pokémon escolhido.
+empre que encontrar um tesouro, imprima " Tesouro na sala X!".
+
+Sempre que encontrar um monstro, imprima "Monstro na sala X!".
 
 <h1><b>Código</b></h1>
 //Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
-  
+
 //- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
 
 //- "print": imprime um texto de saída (output), pulando linha.
 
 // Entrada de dados. Lembre-se: O parseInt(()) é importante para a conversão dos valores de entrada(String) para um valor numérico(int).
+const totalSalas = parseInt(gets());
 
-<b>let escolhaDoTreinador = parseInt(gets());
-let pokemonEscolhido; </b>
+//Aqui temos uma demonstração de array com valores já predefinidos:
 
-//TODO: Implemente as condições necessárias para a solução do desafio. Utilize a tabela de exemplos para identificar a escolha do treinador:
 <b>
+const salasComTesouro = [2, 4, 7];
+ 
+const salasComMonstro = [3, 6, 8];</b>
 
-if ( escolhaDoTreinador === 1) {
+//Aqui temos uma forma de loop para percorrer cada sala da masmorra:
 
-    pokemonEscolhido = "Bulbasaur";
-} else if ( escolhaDoTreinador === 2 ) {
-
-    pokemonEscolhido = "Charmander";
-} else if ( escolhaDoTreinador === 4 ) {
-
-    pokemonEscolhido = "Pikachu";
-} else{
-
-    pokemonEscolhido = "Mewtwo";
-}
-</b>
-
-//Imprime o Pokémon escolhido:
 <b>
+for (let sala = 1; sala <= totalSalas; sala++) { </b>
+ 
+//Utilizamos o .includes() para verificar se um número está presente nos arrays:
 
-if (pokemonEscolhido) {
-
-    print("Voce escolheu o " + pokemonEscolhido + " como seu Pokemon inicial.");
-}
 </b>
+    const temTesouro = salasComTesouro.includes(sala);
+    const temMonstro = salasComMonstro.includes(sala);
+    </b>
+
+//TODO: Agora implemente uma condição necessária para verificar e exibir se há tesouro na sala e se há montro na sala:
+
+<b>
+    if (temTesouro  ) {
+ 
+        print("Tesouro na sala " + sala + "!");
+    }
+    else if ( temMonstro )
+    {
+        print("Monstro na sala " + sala + "!");
+    }
+} </b>
