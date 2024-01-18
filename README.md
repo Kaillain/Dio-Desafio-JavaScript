@@ -25,12 +25,14 @@ Operadores Matemáticos: Usou o operador de módulo (%) para calcular o índice 
 
 Concatenação de Strings: Utilizou a concatenação (símbolo de +) de strings para criar a mensagem de saída exibida após cada golpe. Isso envolveu a combinação do número do golpe (i), o texto estático e o mineral obtido a partir do array minerais.
 
+<h1><b>Código</b></h1>
+
 Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
 //- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
 
 // - "print": imprime um texto de saída (output), pulando linha.
 
- //Lê a quantidade de golpes informada pelo usuário.
+//Lê a quantidade de golpes informada pelo usuário.
 // O parseInt(()) vai converter os valores de entrada(string) para um valor numérico(Int).
 //const quantidadeGolpes = parseInt(gets());
 
@@ -43,6 +45,6 @@ for (let i = 1; i <= quantidadeGolpes; i++) {
   //Calcula o índice do mineral usando o operador de módulo (%) para garantir que o índice esteja dentro do tamanho do array
   let minaIndex = i % minerais.length;
 
-   TODO: Agora exiba o índice i, concatene com o caractere ":", após, concatene com tipo de minerais[minaIndex]:
-  print(i + ": " + minerais[minaIndex]);
+ //TODO: Agora exiba o índice i, concatene com o caractere ":", após, concatene com tipo de minerais[minaIndex]:
+   print(i + ": " + minerais[minaIndex]);
 }
